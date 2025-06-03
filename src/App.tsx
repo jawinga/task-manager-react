@@ -28,8 +28,9 @@ function App() {
 
           <Sidebar />
 
-       <main>
-        <h1 className='welcome-user'>Hello there, <span className='welcome-user__highlight'>USER</span></h1>
+          <div className="container-fluid py-4 layout__layout-tasks">
+
+                 <h1 className='welcome-user'>Hello there, <span className='welcome-user__highlight'>USER</span></h1>
         <div className='cards-stats'>
 
 
@@ -82,10 +83,24 @@ function App() {
      
         </div>
 
-      </main>
+
+
+
+
+
+          </div>
+
+            
+   
+
+     
+          
+          
+          </div>
+
+     
 
       </div>
-        </div>
 
       
       

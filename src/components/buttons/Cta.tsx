@@ -12,6 +12,10 @@ export const Cta  = () => {
 
 
   return (
-    <button onClick={handleClick} className='cta'>Add task <div className='cta__state'>{isActive? "-" : "+"}</div></button>
-  )
+<div className="container">
+      <button onClick={handleClick} className="cta">
+        Add task
+        <div className="cta__state">{isActive ? "-" : "+"}</div>
+      </button>
+    </div>  )
 }
