@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import '../styles/main.scss';
 import Sidebar from '../components/Sidebar';
 import {Navbar} from '../components/Navbar';
@@ -26,34 +26,34 @@ function Tasks() {
 
   const [tasks, setTasks] = React.useState<Task[]>(mockTasks);
   const [filter, setFilter] = React.useState<string>('all');
-  const [yourTasks, setYourTasks] = React.useState<Task[]>([]);
   const [sort, setSort] = React.useState<string>('any');
   
 
   const projects = mockProjects;
   const users = mockUsers;
 
-    const filteredTasks = filter === 'all'
+const visibleTasks = useMemo(() => {
+  const filtered = filter === 'all'
     ? tasks
     : tasks.filter(task => task.status === filter);
 
-    const sortTasks = () =>{if(sort === 'any') {
-      
-      setTasks(filteredTasks);
+  if (sort === 'due-date') {
+    return [...filtered].sort(
+      (a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()
+    );
+  }
 
-    }else if(sort === 'due-date') {
-      setTasks([...filteredTasks].sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()));
+  if (sort === 'priority') {
+   /* const priorityOrder = { low: 1, medium: 2, high: 3 };
+    return [...filtered].sort(
+      (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]
+    );*/
+  }
 
-    }else if(sort === 'priority') {
-     {/* setTasks([...filteredTasks].sort((a, b) => {
-        const priorityOrder = { low: 1, medium: 2, high: 3 };
-        return priorityOrder[a.priority] - priorityOrder[b.priority];
-      }));*/}
+  return filtered;
+}, [tasks, filter, sort]);
 
-    }else{
-      console.log("Sort option not recognized");
-      
-    }}
+
 
 
 
@@ -91,7 +91,7 @@ function Tasks() {
 
   <div className="row">
 
-<Filter tasks={filteredTasks} projects={projects} users={users} />
+<Filter tasks={visibleTasks} projects={projects} users={users} />
 
     {/*{tasks.map((task) => {
   const project = projects.find(p => p.id === task.projectId);

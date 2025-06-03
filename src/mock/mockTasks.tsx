@@ -72,4 +72,18 @@ export const mockTasks: Task[] = [
         access: 'public',
 
     },
+    {
+        id: 204,
+        title: 'Code Review - Dashboard',
+        description: 'Add unit tests for the new dashboard components.',
+        status: 'stuck',
+        assignedTo: ['u5'],
+        dueDate: '2025-06-04T23:59:59',
+        projectId: 2,
+        priority: 'low',
+        completed: false,
+        pinned: false,
+        access: 'public',
+
+    },
 ];
