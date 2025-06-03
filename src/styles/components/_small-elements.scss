@@ -1,0 +1,47 @@
+.card-status{
+
+    padding: 0.5rem;
+    border-radius: 16px;
+    background-color: #f0f0f0;
+
+    &--not-started{
+        background-color: gray;
+    }
+    &--in-progress{
+        background-color: purple;
+    }
+    &--completed{
+        background-color: green;
+    }
+    &--stuck{
+        background-color: red;
+    }
+
+
+}
+
+
+.silver-gradient {
+  background: linear-gradient(to right, #d1d5db, #9ca3af, #6b7280);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.languages-select{
+
+    border: none;
+    background-color: transparent;
+
+
+    option{
+
+        background-color: #d9d9d9;
+        color: #333;
+    }
+
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+}

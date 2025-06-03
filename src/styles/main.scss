@@ -1,0 +1,49 @@
+@import './components/sidebar';
+@import './components/cards';
+@import './components/navbar';
+@import './components/searchbar';
+@import './components/buttons';
+@import './layout/main-layout';
+@import './components/user-profile';
+@import './abstracts/keyframes';
+@import './components//small-elements';
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: linear-gradient(135deg, #2c2c2c, #000000);
+  background-attachment: fixed; /* Optional: locks background */
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+
+
+
+body{
+
+      font-family: "Onest", sans-serif;
+      /*background-image: url('../assets/background-images/background-main.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;*/
+     
+
+
+}
+
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  background-color: white;
+  padding: 2rem;
+  z-index: -1;
+}

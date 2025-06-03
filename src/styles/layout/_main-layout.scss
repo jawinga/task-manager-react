@@ -1,0 +1,97 @@
+.layout{
+
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    scrollbar-width: none; 
+
+    &__layout-tasks{
+
+        
+        margin-left: 12rem;
+        margin-top: 8rem;
+        width: calc(100% - 12rem);
+        flex-direction: column;
+        gap: 4rem;
+
+
+
+
+    }
+
+
+    
+
+
+    nav{
+
+    }
+
+ 
+
+    main{
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column: repeat(4, 1fr);
+        
+    }
+
+    .welcome-user{
+
+        grid-row: 1/2;
+        color: #d9d9d9;
+
+        &__highlight{
+
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #9333EA, #3B82F6, #9333EA);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 4s linear infinite;
+
+        }
+
+
+    }
+
+
+
+
+       .cards-stats{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        display: flex;
+        gap: 4rem;
+
+    }
+
+    .cards-overview{
+
+        grid-column: 1/-1;
+        grid-row: 3/4;
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+
+    }
+
+    .cards-projects{
+        grid-column: 1/-1;
+        grid-row: 4/5;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+.main-content {
+  flex: 1; // 🚨 This is what makes <main> expand next to Sidebar
+  overflow-y: auto;
+}
+

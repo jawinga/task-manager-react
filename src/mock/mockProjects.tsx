@@ -1,0 +1,46 @@
+import type { Project } from '../models/Project';
+
+export const mockProjects: Project[] = [
+    {
+        id: 1,
+        name: 'Redesign Landing Page',
+        description: 'Update the UI/UX of our main product landing page.',
+        startDate: '2025-06-01T09:00:00',
+        endDate: '2025-06-15T18:00:00',
+        status: 'active',
+        teamMembers: ['u1', 'u2'],
+        taskIds: [101, 102],
+        progress: 45,
+        priority: 'high',
+        access: 'private',
+        categories: ['Design'],
+    },
+    {
+        id: 2,
+        name: 'Mobile App Launch',
+        description: 'Prepare and launch the new mobile application for iOS and Android.',
+        startDate: '2025-07-01T10:00:00',
+        endDate: '2025-08-01T17:00:00',
+        status: 'on-hold',
+        teamMembers: ['u3', 'u4', 'u5'],
+        taskIds: [201, 202, 203],
+        progress: 10,
+        priority: 'medium',
+        access: 'public',
+        categories: ['Development', 'Marketing'],
+    },
+    {
+        id: 3,
+        name: 'Urgent Bug Fix',
+        description: 'Fix critical bug reported by users today.',
+        startDate: new Date().toISOString().slice(0, 10) + 'T09:00:00',
+        endDate: new Date().toISOString().slice(0, 10) + 'T19:00:00',
+        status: 'active',
+        teamMembers: ['u2', 'u6'],
+        taskIds: [301],
+        progress: 0,
+        priority: 'high',
+        access: 'private',
+        categories: ['Development'],
+    }
+];

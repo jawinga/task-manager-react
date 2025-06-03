@@ -1,0 +1,17 @@
+.list-avatars{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+
+}
+
+.user-profile-avatar{
+
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    object-fit: cover;
+
+}

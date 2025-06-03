@@ -1,0 +1,266 @@
+/*<div className="card card--progress">
+
+            <div className="card__title">
+                <h3>{card.title}</h3>
+                <h2 className="card__title">{card.value}</h2>
+            </div>
+            <div className="card__percentage">
+                {card.percentage && <span>{card.percentage}%</span>}
+            </div>
+</div>*/
+
+.card h1, h2, h3{
+
+    margin: 0;
+
+}
+
+
+.card{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.2REM;
+     width: 230px;
+    height: 200px;
+    border: solid 1px #e0e0e0;
+    color:#e0e0e0 ;
+    border-radius: 16px;
+    /*background-image: url('../../assets/background_images/nav_background.png');*/
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1.5rem;
+    background-image: url(../../../public/card-background.jpg);
+
+
+
+    &--progress{
+
+    
+
+    }
+
+
+
+    &__title{
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+
+
+    }
+
+    &__value{
+
+        font-size: 2.5rem
+
+    }
+
+    &__percentage{
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+
+}
+
+.overview-card{
+
+    height: auto;
+    width: 600px;
+    border: solid 1px #e0e0e0;
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+
+    &__title{
+        margin-bottom: 1.1rem;
+
+    }
+
+    &__stats{
+
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+    }
+
+
+
+}
+
+.project-card{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 16px;
+    height: fit-content;
+    width: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid 3px #6D6D6D;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    color: #d9d9d9;
+    background-image: url('../../../public/card-background.jpg');
+    
+    
+
+    &__main-content{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 1.5rem;
+      
+        width: 80%;
+
+        &__features{
+
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;   
+
+        }
+
+        &__title{
+
+
+        }
+
+        &__progress{
+
+        }
+
+
+    }
+
+    &__time{
+
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &__timer{
+
+
+        }
+
+        &__due-date{
+
+
+        }
+
+    }
+
+}
+
+
+.task-card {
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
+
+    border-radius: 16px;
+    width: 100%;               // full width of container
+    max-width: 900px;          // prevent it from stretching too much
+    height: auto;
+    background-image: url(../../../public/card-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    color: #d9d9d9;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+
+   &__status{
+    display: flex;
+   } 
+
+   &--assigned{
+
+    background-image: url('../../../public/complete-background.png') !important;
+
+   }
+
+
+
+  &__left {
+    // Left container styles
+
+  }
+
+        &__left-content {
+    // inner content styling
+  }
+
+        &__left-top,
+         &__left-bottom {
+            display: flex;
+            align-items: center;    // layout blocks
+
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            align-items: center;
+            
+        }
+
+         &__title,
+         &__project-name,
+         &__urgency,
+        &__due-date {
+            margin-bottom: 0 !important;
+    // specific elements
+        }
+
+        &__right {
+    // Right container styles
+        }
+
+        &__right-content {
+    // inner content
+         }
+
+        &__right-bottom {
+    // right bottom layout
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+        }
+
+         &__status,
+         &__assignee {
+    // status and assignee styling
+            display: flex;
+            align-items: center;
+            gap: 1.2em;
+         }
+        }

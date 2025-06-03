@@ -1,0 +1,33 @@
+.search-bar{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    background-color: none;
+    margin-right: 5rem;
+    align-self: center;
+
+
+    &__container{
+
+        color: #ababab ;
+        font-family: "Onest", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__input{
+
+        background-color: none;
+        border-radius: 16px !important;
+        height: 25px;
+                        font-family: "Onest", sans-serif;
+
+
+
+    }
+
+}
